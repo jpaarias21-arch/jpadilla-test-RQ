@@ -1,0 +1,391 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN BASE
+   ========================================================================== */
+:root {
+    --color-primary: #0056b3;     
+    --color-secondary: #0a1931;   /* Azul marino oscuro e institucional */
+    --color-text-dark: #1f2937;   /* Gris oscuro de alta legibilidad */
+    --color-text-light: #4b5563;  
+    --color-bg-light: #eceff1;    /* Color de fondo gris claro de los recuadros */
+    --color-white: #ffffff;
+    --font-main: 'Open Sans', sans-serif;
+    --font-heading: 'Nunito Sans', sans-serif;
+    --max-width: 1200px;
+    --transition: all 0.3s ease;
+}
+
+/* Efecto de desplazamiento suave en toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y NAVEGACIÓN
+   ========================================================================== */
+.main-header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px; 
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    border-left: 2px solid #dddddd;  
+    padding-left: 20px;            
+    line-height: 1.2;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    gap: 25px; 
+}
+
+.main-nav a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    transition: var(--transition);
+    padding: 5px 0;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.menu-toggle {
+    display: none !important; 
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO (PRINCIPAL)
+   ========================================================================== */
+.hero-section {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--color-secondary);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-weight: 700;
+    border-radius: 25px;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #004085;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. SECCIÓN DE CATÁLOGO (ESTILO ADAPTADO A LAS IMÁGENES)
+   ========================================================================== */
+.services-section {
+    padding: 80px 0;
+    background-color: var(--color-bg-light); /* Fondo gris claro idéntico */
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Cuadrícula de 2 columnas para simular la distribución de tus capturas */
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+/* Estilo exacto de las tarjetas de las imágenes del usuario */
+.card {
+    background-color: #ededed; 
+    border: 2px solid var(--color-secondary); /* Borde azul oscuro característico */
+    border-radius: 18px;                      /* Esquinas muy redondeadas */
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Ajustes de las imágenes internas de los catálogos */
+.card-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image-container img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 14px; /* Esquinas curvas en las fotos internas */
+}
+
+/* Tipografía de las tarjetas */
+.card h3 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #1a2e56; /* Tono azulado oscuro para el texto descriptivo */
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Clase de utilidad para las tarjetas que llevan la foto ABAJO */
+.card.img-bottom {
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   5. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.main-footer {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-badge img {
+    background-color: var(--color-white);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .cta-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .logo-text {
+        font-size: 0.85rem; 
+        padding-left: 12px;
+    }
+
+    .grid-services {
+        grid-template-columns: 1fr; /* Columna única en móviles */
+        gap: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: flex !important; 
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-white);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+    }
+
+    .main-nav.open {
+        left: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantas Eléctricas - RQ Ingeniería S.A.</title>
+    <meta name="description" content="Plantas eléctricas y transferencias automáticas, venta y alquiler de plantas o generadores eléctricos.">
+    
+    <!-- Enlace al archivo CSS separado -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fuentes de Google (Tipografías oficiales del sitio) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado Principal de la Página -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Bloque de Identidad: Logo + Eslogan -->
+            <div class="logo-group">
+                <div class="logo">
+                    <a href="#">
+                        <img src="logo.png" alt="Logo RQ Ingeniería S.A.">
+                    </a>
+                </div>
+                <span class="logo-text">Expertos en generadores plantas eléctricas</span>
+            </div>
+            
+            <!-- Botón de menú hamburguesa (Se activa solo en móviles) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Menú de Navegación Estructurado -->
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#catalogo">Plantas Eléctricas</a></li>
+                    <li><a href="#catalogo">Venta y Alquiler</a></li>
+                    <li><a href="#catalogo">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal Semántico -->
+    <main>
+        <!-- Sección Hero (Presentación Destacada) -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Plantas Eléctricas y Transferencias Automáticas</h1>
+                    <p>Expertos en la venta, alquiler e instalación de generadores eléctricos de alta calidad para garantizar tu energía continua.</p>
+                    <div class="cta-actions">
+                        <!-- El botón ahora apunta directamente al ID del catálogo con desplazamiento suave -->
+                        <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
+                        <a href="#" class="btn btn-outline">Contáctanos</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://rqingenieria.net/wp-content/uploads/2024/02/Plantas-varias-2.png" alt="Varias plantas eléctricas marca Lees">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Catálogo Reestructurada con ID para el botón -->
+        <section class="services-section" id="catalogo">
+            <div class="container">
+                <h2 class="section-title">Nuestro Catálogo de Equipos y Servicios</h2>
+                <div class="grid-services">
+                    
+                    <!-- Tarjeta 1: Plantas Eléctricas (image_73bf29.jpg) -->
+                    <article class="card">
+                        <div class="card-image-container">
+                            <img src="planta-electrica-grua.jpg" alt="Instalación de planta eléctrica Lees Power con grúa">
+                        </div>
+                        <div class="card-content">
+                            <h3>Plantas eléctricas</h3>
+                            <p>Marca LEES POWER, con motor diésel Lees, Cummins y Doosan, alternador Leroy-Sommers y controlador DSE. Abiertas o con gabinete insonoro para intemperie. Potencias desde los 8 a los 2000 kW.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: Transferencias Automáticas (image_73bf29.jpg) -->
+                    <article class="card">
+                        <div class="card-image-container">
+                            <img src="transferencias-automaticas.jpg" alt="Tableros de transferencias automáticas">
+                        </div>
+                        <div class="card-content">
+                            <h3>Transferencias Automáticas</h3>
+                            <p>Diseño y ensamblaje de transferencias automáticas, enclavadas y controladas por el panel de control de la planta eléctrica o con su propio controlador DSE.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: Mantenimiento (image_73bf4b.jpg) -->
+                    <article class="card img-bottom">
+                        <div class="card-content">
+                            <h3>Mantenimiento de plantas eléctricas y ATS</h3>
+                            <p>Mantenimientos preventivos y retrofit tanto de plantas eléctricas como de transferencias automáticas. Cambio de panel de control.</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="mantenimiento-motor.jpg" alt="Mantenimiento preventivo de motor Lees">
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 4: Alquiler (image_73bf4b.jpg) -->
+                    <article class="card img-bottom">
+                        <div class="card-content">
+                            <h3>Alquiler de plantas eléctricas</h3>
+                            <p>de plantas eléctricas con o sin carreta y en la configuración que usted necesita para asegurar sus operaciones y productividad.</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="alquiler-planta-carreta.jpg" alt="Planta eléctrica móvil con carreta para alquiler">
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 5: Paneles de Control (image_73bf82.jpg) -->
+                    <article class="card img-bottom">
+                        <div class="card-content">
+                            <h3>Paneles de control</h3>
+                            <p>Para motores eléctricos, sistemas de bombeo y de presión constante por medio de variadores de velocidad. Diseño y montaje a la medida según la aplicación.</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="panel-control-variador.jpg" alt="Gabinete de panel de control eléctrico">
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 6: Controladores DSE (image_73bf82.jpg) -->
+                    <article class="card img-bottom">
+                        <div class="card-content">
+                            <h3>Controladores DSE</h3>
+                            <p>Para plantas eléctricas y para transferencias automáticas. Con opción de dos fuentes, supervisión remota por PC y SMS y módulos de red.</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="controlador-dse.jpg" alt="Módulo controlador Deep Sea Electronics">
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 RQ Ingeniería S.A. Todos los derechos reservados.</p>
+            <div class="footer-badge">
+                <img src="https://rqingenieria.net/wp-content/uploads/2024/02/Cfia.jpg" alt="Miembro Incorporado CFIA" width="60">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
